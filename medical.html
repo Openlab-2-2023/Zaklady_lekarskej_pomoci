@@ -101,7 +101,7 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: rgb(222, 222, 222)
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -118,16 +118,27 @@ body {
     width: 100%;
   }
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#grad1 {
+  height: 350px;
+  background-color: rgb(120, 183, 64); /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(83, 243, 65), rgb(0, 42, 23));
+}
 </style>
 </head>
 <body>
 
-<div class="header">
+<div id="grad1" class="header">
   <h1>Základy lekarskej pomoci</h1>
   <b><p>Vytvorené Samuelom Backom pre krajšiu budúcnosť nášho života.</p></b>
 </div>
 
-<div class="navbar">
+<div class="navbar" style="background-image: linear-gradient(rgb(44, 44, 44), rgb(37, 37, 37));">
   <a href="#" class="active">Domov</a>
   <a href="#">Omrzliny</a>
   <a href="#">Panické záchvaty</a>
@@ -137,15 +148,16 @@ body {
 </div>
 
 <div class="row">
-  <div class="side">
-    <h2>O mne:</h2>
-    <h5>Fotka mňa:</h5>
+  <div class="side" style="background-image: linear-gradient(rgb(255, 255, 255), rgb(222, 222, 222));">
+    <h2>O Organizácií:</h2>
+    <h5>Znak organizácie:</h5>
     <div class="fakeimg" style="height:200px;">obrázok</div>
-    <p >Nejaký text...</p>
-    <h3>viac Textu</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <p >Je nezisková organizácia, ktorej poslaním je poskytovať dôveryhodné a všeobecné informácie a služby pre základné lekárske zákroky na jednom mieste. Naša organizácia bola založená s cieľom poskytovať ľuďom jednoduchý a spoľahlivý zdroj informácií a pomoci pri bežných zdravotných problémoch. </p>
+    <h3>Manažment:</h3>
+    <p>Samuel Backa</p>
+  <img class="center" src="file:///C:/Users/backa/Downloads/IMG_20231026_120944.jpg" style="max-width: 400px;max height: 100px;">
+  <p style="max-height: 100px;">Dávid Budoš (Bujak)</p>
+  <img class="center" src="file:///C:/Users/backa/Downloads/David_B2.jpg" style="max-width: 400px;max height: 200px;">
     <div class="fakeimg" style="height:60px;">Image</div>
   </div>
   <div class="main">
@@ -158,7 +170,7 @@ body {
     <p>Prevencia a životný štýl: Okrem ošetrovania aktuálnych problémov vám ponúkame aj informácie o prevencii a zdravom životnom štýle. Získajte tipy na udržanie celkového zdravia a pohody.</p>
     <p>Naším záväzkom je poskytovať spoľahlivé a overené informácie, ktoré vám pomôžu pri starostlivosti o vaše zdravie. Nezabudnite, že tieto informácie sú len informatívneho charakteru a nie sú náhradou za konzultáciu s kvalifikovaným lekárom.</p>
     <p>Obzerajte sa na našu stránku a objavujte, ako môžeme spoločne pracovať na zlepšení vášho zdravia a celkového pohody. Ďakujeme, že ste s nami!</p>
-    <img src="https://www.emergency-live.com/wp-content/uploads/2018/01/medicalproducts_woundcare-1.jpg" style="max-width: 200px;max height: 80px;">
+    <img class="center" src="https://www.emergency-live.com/wp-content/uploads/2018/01/medicalproducts_woundcare-1.jpg" style="max-width: 400px;max height: 200px;">
     <br>
     <h2 style="background-color:rgba(0, 255, 34, 0.264);">TITLE HEADING</h2>
     <h5>Title description, Sep 2, 2017</h5>
@@ -169,7 +181,7 @@ body {
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <h2>.....</h2>
 </div>
 
 </body>
