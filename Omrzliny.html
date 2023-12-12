@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Medical.sk</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #77e669;
+  color: rgb(255, 255, 255);
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #2d2c2c;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color:  #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgb(222, 222, 222)
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#grad1 {
+  height: 350px;
+  background-color: rgb(224, 228, 15); /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(255, 247, 0), rgb(0, 0, 0));
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(253, 253, 86);
+  color: rgb((243, 255, 13)255, 255);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: rgb(179, 194, 117);
+}
+
+</style>
+</head>
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+<div id="grad1" class="header">
+  <h1>Základy lekarskej pomoci</h1>
+  <b><p style="max-height: 100px; ;">(Omrzliny)</p></b>
+</div>
+
+<div class="navbar" style="background-image: linear-gradient(rgb(44, 44, 44), rgb(37, 37, 37));">
+  <a href="medical.html" class="active">Domov</a>
+  <a href="#">Omrzliny</a>
+  <a href="#">Panické záchvaty</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
+</div>
+
+<div class="row">
+  <div class="side" style="background-image: linear-gradient(rgb(255, 255, 255), rgb(222, 222, 222));">
+    <h2>Stupne omrzlín:</h2>
+    <div class="fakeimg" style="height:200px;">obrázok</div>
+    <p>1.stupeň - sivobiele sfarbenie, strata citlivosti, neskôr začervenanie a bolesť</p>
+ <img class="center" class="image" src="https://d50-a.sdn.cz/d_50/c_img_QL_S/k6jCa/ruce-omrzliny.jpeg?fl=cro,0,304,5066,2849%7Cres,1200,,1%7Cjpg,80,,1" style="max-width: 1000px;max-height: 800px;">
+ <p>2.stupeň - tvorba pľuzgierov.</p>
+  <img class="center" src="https://uralstk.ru/wp-content/uploads/2017/dico-rac0.jpg" style="max-width: 400px; max-height: 200px;">
+<p>3.stupeň - krvácanie do kože, vznik modročierneho sfarbenia.</p> 
+<img class="center" src="https://zdravoteka.sk/files/images/choroby/Omrzliny.jpg" style="max-width: 400px; max-height: 200px;">
+<p>4.stupeň - nezvratné zničenie tkaniva, ktoré pri zahriati odpadáva.</p>
+<img class="center" src="https://www.svetoutdooru.cz/wp-content/uploads/sites/3/import/362/obr-4-tit.jpg" style="max-width: 400px; max-height: 200px;">
+</div>
+  <div class="main">
+    <h2 style="background-color:rgb(252, 252, 161);">Čo sú omrzliny?</h2>
+    <h5>Základy lekarskej pomoci</h5>
+    
+    <p><b>-</b> Omrzliny sú poranenia spôsobené vonkajšími faktormi prostredia, konkrétne nízkymi teplotami. Tie pôsobia na kožu a podkožie, kde spôsobujú poškodenia tkanív. Najčastejšie postihujú periférne časti tela, vzdialenejšie od srdca, s nižším prietokom krvi (prsty hornej a dolnej končatiny, uši, nos, pery). V počiatočných štádiách sa prejavujú začervenaním a studenou pokožkou, v neskorších štádiách koža znecitlivie, je tvrdá a bledá. V prípade závažných stavov hrozia amputácie.</p>
+    <img class="center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIDe3v0WXgxG8e5nvFQ7Nxir-EZWFkKLorxViZ2poCsMTxL8qG9SPJZqWq3oSNmNvKK8&usqp=CAU" style="max-width: 400px; max-height: 200px;">
+    <br>
+    <h2 style="background-color:rgb(252, 252, 161);">Ako ošetriť omrzliny?</h2>
+    <p><b style="background-color:rgb(252, 252, 161);">-Presuňte sa do tepla: </b>Okamžite sa premiestnite do teplého prostredia. Vyhnite sa ďalšiemu vystaveniu chladu.</p>
+    <p><b style="background-color:rgb(252, 252, 161);">-Odsuňte mokré oblečenie:</b> Oblečenie, ktoré je mokré, môže ďalej zvyšovať riziko omrzlín. Oblečenie odstráňte a vymieňte za suché.</p>
+    <p><b style="background-color:rgb(252, 252, 161);">-Nepokladajte ohrievané tkaniny:</b> Ohrievané tkaniny môžu byť príliš horúce pre omrznutú oblasť. Používajte teplé, nie horúce, obklady alebo ohrievané vrecká.</p>
+    <p><b style="background-color:rgb(252, 252, 161);">-Ohrievajte postupne:</b> Ohrievanie by malo byť postupné. Používajte teplú vodu (nie horúcu) alebo teplé obklady. Nedávajte priame teplo, ako napríklad horúce vankúše, na omrznutú oblasť.</p>
+    <p><b style="background-color:rgb(252, 252, 161);">-Nevarte omrzliny:</b> Neponúkajte omrzliny priamemu teplu. Je to bolestivé a môže spôsobiť ďalšie poškodenie tkanív.</p>
+    <p><b style="background-color:rgb(252, 252, 161);">-Nemasírujte postihnutú oblasť:</b> Nemasírujte omrznutú oblasť, pretože to môže zvýšiť poškodenie tkanív.</p>
+    <p><b style="background-color:rgb(252, 252, 161);">-Pite teplé nápoje:</b> Pite teplé nápoje, aby sa zvýšil vnútorný teplotný komfort.</p>
+    <p><b style="background-color:rgb(252, 252, 161);">-Užívajte analgetiká:</b> Ak je to potrebné, užívajte nejaké analgetiká na zníženie bolesti. Konzultujte s lekárom o správnom dávkovaní.</p>
+    <p><b style="background-color:rgb(252, 252, 161);">-Oblečte sa do suchého a teplého oblečenia:</b> Oblečte sa do suchého a teplého oblečenia, aby ste udržali teplo.</p>
+    <p><b style="background-color:rgb(252, 252, 161);">-Monitorujte príznaky:</b> Monitorujte svoje zdravie a príznaky. Ak bolesť neustále pretrváva alebo sa zhoršuje, vyhľadajte lekára.</p>
+    <div class="fakeimg" style="height:200px;">Image</div>
+  </div>
+</div>
+
+<div class="footer">
+  <h3>Sledujte nás na našich platformách a buďte pripravení na nové informácie, tipy a rady o rýchlej pomoci pri rôznych poraneniach a zraneniach.</h3>
+</div>
+
+</body>
+</html>

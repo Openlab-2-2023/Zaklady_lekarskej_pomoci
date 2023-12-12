@@ -4,135 +4,35 @@
 <title>Medical.sk</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
 <style>
-* {
-  box-sizing: border-box;
-}
-
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #77e669;
-  color: rgb(61, 61, 61);
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
-
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
-.navbar {
-  overflow: hidden;
-  background-color: #2d2c2c;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
 
 
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Active/current link */
-.navbar a.active {
-  background-color: #666;
-  color: white;
-}
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: rgb(222, 222, 222)
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-#grad1 {
-  height: 350px;
-  background-color: rgb(120, 183, 64); /* For browsers that do not support gradients */
-  background-image: linear-gradient(rgb(83, 243, 65), rgb(0, 42, 23));
-}
 </style>
 </head>
 <body>
-
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 <div id="grad1" class="header">
   <h1>Základy lekarskej pomoci</h1>
   <b><p>Vytvorené Samuelom Backom pre krajšiu budúcnosť nášho života.</p></b>
@@ -140,7 +40,7 @@ body {
 
 <div class="navbar" style="background-image: linear-gradient(rgb(44, 44, 44), rgb(37, 37, 37));">
   <a href="#" class="active">Domov</a>
-  <a href="#">Omrzliny</a>
+  <a href=Omrzliny.html>Omrzliny</a>
   <a href="#">Panické záchvaty</a>
   <a href="#">Link</a>
   <a href="#">Link</a>
@@ -155,33 +55,36 @@ body {
     <p >Je nezisková organizácia, ktorej poslaním je poskytovať dôveryhodné a všeobecné informácie a služby pre základné lekárske zákroky na jednom mieste. Naša organizácia bola založená s cieľom poskytovať ľuďom jednoduchý a spoľahlivý zdroj informácií a pomoci pri bežných zdravotných problémoch. </p>
     <h3>Manažment:</h3>
     <p>Samuel Backa</p>
-  <img class="center" src="file:///C:/Users/backa/Downloads/IMG_20231026_120944.jpg" style="max-width: 400px;max height: 100px;">
-  <p style="max-height: 100px;">Dávid Budoš (Bujak)</p>
-  <img class="center" src="file:///C:/Users/backa/Downloads/David_B2.jpg" style="max-width: 400px;max height: 200px;">
-    <div class="fakeimg" style="height:60px;">Image</div>
+ <img class="center" class="image" src="file:///C:/Users/backa/Downloads/IMG_20231026_120944.jpg" style="max-width: 400px; max-height: 400px;">
+ <p style="max-height: 100px;">David Budoš (Bujak)</p>
+  <img class="center" src="file:///C:/Users/backa/Downloads/David_B2.jpg" style="max-width: 400px; max-height: 400px;">
   </div>
   <div class="main">
     <h2 style="background-color:rgba(0, 255, 34, 0.264);">Čo sa nachádza na stránke?</h2>
     <h5>Základy lekarskej pomoci</h5>
     
-    <p>Omrzliny a ich ošetrenie: Získajte ucelený pohľad na to, ako správne ošetriť omrzliny a minimalizovať ich nepríjemné následky. Nájdete tu praktické rady a triky na rýchle zmiernenie bolesti a zlepšenie hojenia.</p>
-    <p>Panické záchvaty a ich riadenie: Prejdite si postupmi, ktoré vám pomôžu zvládnuť panické záchvaty. Objavte techniky dýchania, relaxácie a zmierňovania úzkosti, ktoré vám môžu pomôcť obnoviť vnútornú rovnováhu.</p>
-    <p>Ošetrovanie rôznych zdravotných stavov: Informujte sa o správnych krokoch pri zvládaní rôznych zdravotných problémov, ako sú poranenia, pálenie žáhy, alebo bolesti hlavy. Naša stránka vám poskytne praktické rady pre každodenné zdravotné situácie.</p>
-    <p>Prevencia a životný štýl: Okrem ošetrovania aktuálnych problémov vám ponúkame aj informácie o prevencii a zdravom životnom štýle. Získajte tipy na udržanie celkového zdravia a pohody.</p>
+    <p><b>Omrzliny a ich ošetrenie:</b> Získajte ucelený pohľad na to, ako správne ošetriť omrzliny a minimalizovať ich nepríjemné následky. Nájdete tu praktické rady a triky na rýchle zmiernenie bolesti a zlepšenie hojenia.</p>
+    <p><b>Panické záchvaty a ich riadenie:</b> Prejdite si postupmi, ktoré vám pomôžu zvládnuť panické záchvaty. Objavte techniky dýchania, relaxácie a zmierňovania úzkosti, ktoré vám môžu pomôcť obnoviť vnútornú rovnováhu.</p>
+    <p><b>Ošetrovanie rôznych zdravotných stavov:</b> Informujte sa o správnych krokoch pri zvládaní rôznych zdravotných problémov, ako sú poranenia, pálenie žáhy, alebo bolesti hlavy. Naša stránka vám poskytne praktické rady pre každodenné zdravotné situácie.</p>
+    <p><b>Prevencia a životný štýl:</b> Okrem ošetrovania aktuálnych problémov vám ponúkame aj informácie o prevencii a zdravom životnom štýle. Získajte tipy na udržanie celkového zdravia a pohody.</p>
     <p>Naším záväzkom je poskytovať spoľahlivé a overené informácie, ktoré vám pomôžu pri starostlivosti o vaše zdravie. Nezabudnite, že tieto informácie sú len informatívneho charakteru a nie sú náhradou za konzultáciu s kvalifikovaným lekárom.</p>
     <p>Obzerajte sa na našu stránku a objavujte, ako môžeme spoločne pracovať na zlepšení vášho zdravia a celkového pohody. Ďakujeme, že ste s nami!</p>
-    <img class="center" src="https://www.emergency-live.com/wp-content/uploads/2018/01/medicalproducts_woundcare-1.jpg" style="max-width: 400px;max height: 200px;">
+    <img class="center" src="https://www.emergency-live.com/wp-content/uploads/2018/01/medicalproducts_woundcare-1.jpg" style="max-width: 400px; max-height: 200px;">
     <br>
-    <h2 style="background-color:rgba(0, 255, 34, 0.264);">TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
+    <h2 style="background-color:rgba(0, 255, 34, 0.264);">Plány do budúcnosti:</h2>
+    <p>Naša organizácia sa neustále zaväzuje k rozširovaniu svojej misie poskytovať spoľahlivé informácie a pomáhať v oblasti základnej lekárskej pomoci. Sme nadšení ohlásením, že plánujeme viacero ďalších vydaní a článkov, ktoré sa zamerajú na rýchlu pomoc pri rôznych poraneniach a zraneniach.</p>
+    <h2 style="background-color:rgba(0, 255, 34, 0.264);">Ďalšie tematické oblasti:</h2>
+    <p>V budúcich edíciách sa budeme venovať širšiemu spektru tém, ako napríklad prvé kroky pri drobných poraneniach, rýchla reakcia pri škrabaniach a rezných ranách, ale aj správne postupy pri úrazoch športovcov a mnoho ďalších. Naším cieľom je poskytnúť ľuďom ucelené informácie, ktoré im umožnia účinne reagovať na rôzne zdravotné situácie.</p>
+    <h2 style="background-color:rgba(0, 255, 34, 0.264);">Zapojte sa a sledujte nás:</h2>
+    <p>Chceme, aby ste boli s nami na tejto ceste. Sledujte naše vydané články, získavajte nové poznatky a zdieľajte ich s ostatnými. Vaša spätná väzba a otázky nám pomáhajú lepšie rozumieť potrebám našej komunity, a my sme tu, aby sme vám poskytli spoľahlivé a užitočné informácie.</p>
+    <h2 style="background-color:rgba(0, 255, 34, 0.264);">Zdravie je cesta, nie cieľ:</h2>
+    <p> Veríme, že zdravie je cestou, a nie cieľom. S naším plánom na viacero vydaní a šírením informácií o rýchlej pomoci pri rôznych poraneniach chceme pomôcť každému na jeho jedinečnej ceste k lepšiemu zdraviu.</p>
     <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
   </div>
 </div>
 
 <div class="footer">
-  <h2>.....</h2>
+  <h3>Sledujte nás na našich platformách a buďte pripravení na nové informácie, tipy a rady o rýchlej pomoci pri rôznych poraneniach a zraneniach.</h3>
 </div>
 
 </body>
