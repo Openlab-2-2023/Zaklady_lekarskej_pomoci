@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Medical.sk</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #77e669;
+  color: rgb(255, 255, 255);
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #2d2c2c;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color:  #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgb(222, 222, 222)
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#grad1 {
+  height: 350px;
+  background-color: rgb(0, 255, 64); /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(53, 171, 17), rgb(0, 0, 0));
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ba0000;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(134, 255, 136);
+  color: rgb((243, 255, 13)255, 255);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: rgb(59, 158, 32);
+}
+
+</style>
+</head>
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+<div id="grad1" class="header">
+  <h1>Základy lekarskej pomoci</h1>
+  <b><p style="max-height: 100px; ;">(Otravy)</p></b>
+</div>
+
+<div class="navbar" style="background-image: linear-gradient(rgb(44, 44, 44), rgb(37, 37, 37));">
+  <a href="medical.html" class="active">Domov</a>
+  <a href="Omrzliny.html">Omrzliny</a>
+  <a href="panické_záchvaty.html">Panické záchvaty</a>
+  <a href="Popáleniny.html">Popáleniny</a>
+  <a href="#">Otravy</a>
+  <a href="#" class="right">Link</a>
+</div>
+
+<div class="row">
+  <div class="side" style="background-image: linear-gradient(rgb(255, 255, 255), rgb(222, 222, 222));">
+    <h2 style="background-color:rgb(0, 255, 47);">Čo je to otrava?</h2>
+    <h5>Základy lekarskej pomoci</h5>
+    
+    <p><b>-</b> Otrava je stav, ktorý nastáva, keď organizmus vstúpi do kontaktu s jedovatou látkou alebo sa otrávi jej konzumáciou, vdýchnutím alebo absorpciou cez pokožku. Tento stav môže byť spôsobený rôznymi toxickými substanciami a má potenciálne vážne dôsledky pre zdravie. Tu sú niektoré základné body, ktoré definujú otravu:</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Expozícia na jedovatú látku: </b>Otrava môže nastať v dôsledku expozície na jedovatú látku, čo môže zahŕňať chemikálie, lieky, rastliny, huby, jedovatý hmyz a ďalšie látky.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Cesty vstupu: </b>Jedovaté látky môžu vstúpiť do organizmu rôznymi spôsobmi, vrátane konzumácie (ústami), vdýchnutia (plúcami) a absorpcie cez pokožku.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Príznaky otravy: </b>Príznaky otravy sa môžu líšiť v závislosti od druhu jedu a množstva expozície. Zahrňujú bolesti hlavy, nevoľnosť, zvracanie, hnačku, závraty, dýchavičnosť, kožné prejavy a iné symptómy.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Akútne a chronické otravy: </b>Otrava môže byť akútna (náhla a krátkodobá) alebo chronická (dlhodobá, postupujúca). Akútne otravy môžu vyžadovať okamžitú lekársku pomoc.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Liečba otravy: </b>Liečba otravy závisí od druhu jedu a môže zahŕňať výplach žalúdka, podávanie aktívneho uhlia, intravenózne podávanie protijedov a iné postupy.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Otrava jedlom: </b>Otrava potravou môže nastať konzumáciou potravy, ktorá obsahuje mikroorganizmy, baktérie, vírusy alebo ich toxíny, ktoré môžu spôsobiť intoxikáciu.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Otrava plynom: </b>Vdýchnutie toxických plynov môže viesť k otrave plynom. Príklady zahŕňajú otravu oxidom uhelnatým (CO) alebo inými plynnými chemikáliami.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Profesionálna otrava:  </b>Osoby pracujúce v určitých odvetviach môžu byť vystavené toxickým látkam na pracovisku, čo môže spôsobiť profesionálnu otravu.</p>
+</div>
+  <div class="main">
+    
+  
+    <img class="center" src="https://i2.wp.com/fb.ru/misc/i/gallery/46654/2862411.jpg" style="max-width: 400px; max-height: 200px;">
+    <br>
+    <h2 style="background-color:rgb(0, 255, 47);">Ako postupovať pri otrave?</h2>
+    <p><b style="background-color:rgb(0, 255, 47);">-Kontaktujte núdzové číslo: </b>Okamžite volajte núdzové číslo v danej krajine (napr. 112 alebo 911) a poskytnite informácie o podozrení na otravu. Odborníci na núdzovú linku môžu poskytnúť pokyny a navedú vás, ako postupovať.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Ochrana seba a iných: </b> Ak je to možné, odstráňte postihnutú osobu z prostredia, kde došlo k expozícii na jed, aby ste minimalizovali riziko ďalšieho vystavenia.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Vyčistite ústa: </b> Ak osoba dýchala jedovatý plyn alebo konzumovala nebezpečnú látku, môžete jej pomôcť vyplachovaním úst. Avšak nesnažte sa vyvolávať zvracanie bez lekárskeho dohľadu.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Oblečte sa ochrannými pomôckami: </b> Ak manipulujete s osobou alebo látkou, ktorá môže byť jedovatá, použite ochranné pomôcky, ako sú rukavice alebo maska, aby ste minimalizovali vlastnú expozíciu.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Nepodávajte tekutiny ústami: </b> Ak osoba nie je vedomej alebo má problémy s dýchaním, nekŕmte ju ani nepodávajte tekutiny ústami, aby ste predišli aspirácii.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Zachovajte obal látky: </b> Ak viete, čo spôsobilo otravu, zachovajte obal alebo zvyšky látky pre lekárov, aby mohli presnejšie identifikovať jed a stanoviť vhodnú liečbu.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Informujte odborníkov: </b> Keď prídu odborníci, poskytnite im informácie o situácii, príznakoch a akýchkoľvek pokusoch o prvú pomoc.</p>
+    <img class="center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrcp1kTwTKz5Uf43TI0FiXqLu23N2-KJXATQ&usqp=CAU" style="max-width: 400px; max-height: 200px;">
+ 
+    <h2 style="background-color:rgb(0, 255, 47);">Čo by sme nemali robiť pri otrave?</h2>
+    <p><b style="background-color:rgb(0, 255, 47);">-Nepokúšajte sa vyvolať zvracanie bez lekárskeho dohľadu: </b>Vyvolávanie zvracania nie je vždy vhodné a môže zhoršiť situáciu, ak osoba požila korozívne látky, ropné výrobky alebo iné nebezpečné látky.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Nepodávajte tekutiny ústami, ak je osoba v bezvedomí alebo neovláda dýchanie: </b> Ak je niekto bezvedomý alebo nemôže dýchať, je dôležité vyhľadať lekársku pomoc a nekrmiť ho alebo jej tekutinami ústami, aby sa zabránilo aspirácii (vstúpenie tekutiny do dýchacích ciest).</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Nepodávajte protijed bez konzultácie s lekárom: </b> Niektoré látky môžu byť otrávené rôznymi jedmi, a preto je dôležité konzultovať s lekárom alebo toxicológom pred podávaním protijedov.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Nepodávajte lieky bez lekárskeho dohľadu: </b> Zdravotný stav môže byť ovplyvnený podávaním liekov, a preto by sa nemali podávať bez lekárskeho dohľadu, najmä ak nie je známa príčina otravy.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Nepoužívajte domáce prostriedky bez overenia: </b>Nekontrolované používanie domácich metód alebo "starožitných" liekov môže byť nebezpečné a neúčinné.</p> 
+    <p><b style="background-color:rgb(0, 255, 47);">-Nevyhadzujte obaly alebo zvyšky látky, ktorá spôsobila otravu: </b>Obaly môžu poskytnúť dôležité informácie o jedove, ktoré sú nevyhnutné pre lekárske hodnotenie a stanovenie liečby.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Nepodávajte jedlo alebo tekutiny, ak je osoba nepríčetná: </b>Ak je osoba dezorientovaná alebo nepríčetná, môže to viesť k aspirácii. Lepšie je čakať na príchod lekárskej pomoci.</p>
+    <p><b style="background-color:rgb(0, 255, 47);">-Nezmeňujte príznaky: </b>Ak existuje podozrenie na otravu, neodkladajte vyhľadanie lekárskej pomoci. Čím skôr sa poskytne odborná starostlivosť, tým lepšie.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h3>Sledujte nás na našich platformách a buďte pripravení na nové informácie, tipy a rady o rýchlej pomoci pri rôznych poraneniach a zraneniach.</h3>
+</div>
+
+</body>
+</html>
