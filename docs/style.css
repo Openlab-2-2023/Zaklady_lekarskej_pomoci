@@ -252,4 +252,22 @@
     background:rgba(0, 150, 136, 1);
 }
 
- 
+
+svg{
+  height: 70px;
+  width: 150px;
+}
+
+.draw{
+stroke: greenyellow;
+fill: none;
+stroke-width: 3px;
+animation: rate 5s linear infinite;
+stroke-dasharray: 2000;
+}
+
+@keyframes rate{
+  top{
+    stroke-dashoffset: 0%;
+  }
+}
